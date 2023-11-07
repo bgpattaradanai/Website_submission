@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href ="style.css" />
+    <script src="https://kit.fontawesome.com/0ee7850529.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> 
+                <img src="Images/1640459416865.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Pattaradanai Chotirospong</h1>
+            </div>
+        </div>
+    </div>
+<!----------about-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/T21086.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a first-year computer engineering student, eager to explore 
+                        the ins and outs of technology and coding. The world of circuits 
+                        and programming intrigues me, and I'm excited to unravel its complexities.
+                        Beyond the academic journey, I see the potential for technology to solve
+                        real-world problems and improve lives. My interest lies not just in mastering
+                        the technical aspects but in understanding how these skills can be used 
+                        practically to make a difference. I'm here to learn, grow, and eventually 
+                        contribute to a field that's both fascinating and promising.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>C language</span><br>Basic Computation</li>
+                                <li><span>Autocad</span><br>Robot and Automation mechanical parts design</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>UI/UX</span><br>2023 - current</li>
+                                <li><span>C language</span><br>2022 - current</li>
+                                <li><span>Autocad</span><br>2023 - current</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2008 - 2023</span><br>Kwong Chow School</li>
+                                <li><span>2023 - current</span><br>King Mongkut's University of Technology Thonburi</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------contact-------- -->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> bgpattaradanai@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0808189590</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/bg_p4tt/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://web.facebook.com/profile.php?id=100016741693489"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+</body>
+</html>
